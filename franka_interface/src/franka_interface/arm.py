@@ -836,12 +836,18 @@ class ArmInterface(object):
             rospy.logwarn("No CollisionBehaviourInterface object found!")
 
     def get_controller_manager(self):
-
+        """
+        :return: the controller manager interface associated with the robot.
+        :rtype: franka_tools.FrankaControllerManagerInterface
+        """
         return self._ctrl_manager
 
 
     def get_frames_interface(self):
-
+        """
+        :return: the frames changer interface instance associated with the robot.
+        :rtype: franka_tools.FrankaFramesInterface
+        """
         return self._frames_interface
 
 
